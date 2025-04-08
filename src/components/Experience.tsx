@@ -18,6 +18,18 @@ const Experience = () => {
       ]
     },
     {
+      id: 'android',
+      title: 'Technical Team Lead',
+      company: 'Android Club, VIT-AP University',
+      location: 'Amaravati, Andhra Pradesh',
+      period: 'August 2023 - Present',
+      description: [
+        'Led a team of 10 members to organize technical events and drive innovation within the club.',
+        'Coordinated and facilitated workshops, hackathons, and coding competitions to enhance technical skills among club members.',
+        'Mentored junior members in Android development, helping them build their first applications.'
+      ]
+    },
+    {
       id: 'intrain',
       title: 'Remote Intern',
       company: 'Intrain Tech',
