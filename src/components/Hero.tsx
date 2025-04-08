@@ -1,5 +1,6 @@
 
 import { ChevronDown } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
@@ -7,13 +8,14 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 dark:to-black/10"></div>
       
       <div className="section-container relative z-10 flex flex-col items-center justify-center space-y-8 text-center">
-        <div className="w-32 h-32 rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden mb-6">
-          <img 
-            src="/lovable-uploads/9dd953ee-4dba-4135-8e02-6fa16e56adb2.png" 
+        <Avatar className="w-32 h-32 border-2 border-apple-blue shadow-lg">
+          <AvatarImage 
+            src="/lovable-uploads/d59d70ad-78c1-448e-b9e5-b3f08c3afd3b.png" 
             alt="Habeeb Ur Rahman" 
-            className="w-full h-full object-cover"
+            className="object-cover"
           />
-        </div>
+          <AvatarFallback className="bg-apple-blue text-white text-2xl">HR</AvatarFallback>
+        </Avatar>
         
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
           <span className="apple-text-gradient animate-text-shimmer">Habeeb Ur Rahman</span>
