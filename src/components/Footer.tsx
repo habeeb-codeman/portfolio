@@ -1,5 +1,5 @@
 
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, Award } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -20,6 +20,10 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               Technology enthusiast with expertise in Python, AI, ML, and full-stack development.
             </p>
+            <div className="mt-4 flex items-center">
+              <Award size={16} className="text-apple-blue mr-2" />
+              <span className="text-sm text-gray-400">AWS Certified Cloud Practitioner</span>
+            </div>
           </div>
           
           <div className="mt-6 md:mt-0">

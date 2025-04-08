@@ -8,10 +8,11 @@ const Hero = () => {
       
       <div className="section-container relative z-10 flex flex-col items-center justify-center space-y-8 text-center">
         <div className="w-32 h-32 rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden mb-6">
-          {/* Placeholder for profile image */}
-          <div className="w-full h-full flex items-center justify-center text-gray-400">
-            Photo
-          </div>
+          <img 
+            src="/lovable-uploads/9dd953ee-4dba-4135-8e02-6fa16e56adb2.png" 
+            alt="Habeeb Ur Rahman" 
+            className="w-full h-full object-cover"
+          />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
