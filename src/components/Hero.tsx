@@ -20,7 +20,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto animate-fade-in">
-          Technology enthusiast with expertise in Python, AI, ML, and full-stack development.
+          Passionate and dynamic technology enthusiast with expertise in Python, AI, ML, and full-stack development.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-slide-up">
