@@ -1,7 +1,8 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { GraduationCap, Youtube, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { GraduationCap, Youtube, Linkedin, Github, Twitter, Instagram, Flame } from 'lucide-react';
 
 const About = () => {
   return (
@@ -12,12 +13,19 @@ const About = () => {
           <div className="h-1 w-20 bg-apple-blue mx-auto"></div>
         </div>
         
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Introduction Text */}
+        <div className="max-w-3xl mx-auto mb-12 text-center">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Always tinkering with tech and playing with ML to solve real-world stuff. Big on learning new things, building cool projects, and vibing with teams that love innovation. Fun fact: I break things just to figure out how they work (and then fix them… usually).
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Education Card */}
-          <Card className="border-none shadow-md overflow-hidden">
+          <Card className="border-none shadow-md h-full">
             <CardHeader className="bg-gray-50 dark:bg-gray-800 pb-2">
               <div className="flex items-center">
-                <GraduationCap size={24} className="text-apple-blue mr-3" />
+                <GraduationCap size={24} className="text-apple-blue mr-3" strokeWidth={1.5} />
                 <h3 className="text-xl font-bold">Education</h3>
               </div>
             </CardHeader>
@@ -47,101 +55,135 @@ const About = () => {
             </CardContent>
           </Card>
           
-          {/* YouTube Showcase */}
-          <Card className="border-none shadow-md overflow-hidden">
+          {/* Passionate About Card */}
+          <Card className="border-none shadow-md h-full">
             <CardHeader className="bg-gray-50 dark:bg-gray-800 pb-2">
               <div className="flex items-center">
-                <Youtube size={24} className="text-red-600 mr-3" />
-                <h3 className="text-xl font-bold">Tech Content Creator</h3>
+                <Flame size={24} className="text-apple-blue mr-3" strokeWidth={1.5} />
+                <h3 className="text-xl font-bold">Passionate About</h3>
               </div>
             </CardHeader>
             <CardContent className="pt-6">
-              <div className="space-y-6">
-                <p className="text-gray-700 dark:text-gray-300">
+              <div className="space-y-4">
+                <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <h5 className="font-medium">Artificial Intelligence</h5>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                    Machine learning algorithms, neural networks, and practical AI applications
+                  </p>
+                </div>
+                
+                <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <h5 className="font-medium">Full-Stack Development</h5>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                    Building responsive web applications with modern frameworks and tools
+                  </p>
+                </div>
+                
+                <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <h5 className="font-medium">Innovation & Problem Solving</h5>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                    Finding creative solutions to complex technical challenges
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        
+        {/* YouTube and Connect With Me Combined Card */}
+        <Card className="border-none shadow-md max-w-4xl mx-auto">
+          <CardContent className="p-0">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* YouTube Section */}
+              <div className="p-6 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700">
+                <div className="flex items-center mb-4">
+                  <Youtube size={24} className="text-red-600 mr-3" strokeWidth={1.5} />
+                  <h3 className="text-xl font-bold">Tech Content Creator</h3>
+                </div>
+                
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
                   I manage a tech-focused YouTube channel with 1.6k+ subscribers where I share tutorials, reviews, and insights on the latest technology.
                 </p>
                 
-                <div className="flex items-center justify-between bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <div className="flex justify-between bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mb-4">
                   <div>
                     <span className="block font-bold text-xl">1M+</span>
-                    <span className="text-sm text-gray-500">Total Views</span>
+                    <span className="text-sm text-gray-500">Views</span>
                   </div>
                   <div>
                     <span className="block font-bold text-xl">1.6k+</span>
                     <span className="text-sm text-gray-500">Subscribers</span>
                   </div>
-                  <div>
+                </div>
+                
+                <Button 
+                  className="w-full bg-red-600 hover:bg-red-700"
+                  asChild
+                >
+                  <a 
+                    href="https://www.youtube.com/@techbrewtv" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Youtube size={18} className="mr-2" />
+                    Visit My Channel
+                  </a>
+                </Button>
+              </div>
+              
+              {/* Connect With Me Section */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <Button variant="outline" className="w-full" asChild>
                     <a 
-                      href="https://www.youtube.com/@techbrewtv" 
+                      href="https://www.linkedin.com/in/" 
                       target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-full transition-colors duration-300"
+                      rel="noopener noreferrer"
                     >
-                      <Youtube size={16} className="mr-1" />
-                      Visit Channel
+                      <Linkedin size={18} className="mr-2" strokeWidth={1.5} />
+                      LinkedIn
                     </a>
-                  </div>
+                  </Button>
+                  
+                  <Button variant="outline" className="w-full" asChild>
+                    <a 
+                      href="https://github.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={18} className="mr-2" strokeWidth={1.5} />
+                      GitHub
+                    </a>
+                  </Button>
+                  
+                  <Button variant="outline" className="w-full" asChild>
+                    <a 
+                      href="https://twitter.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Twitter size={18} className="mr-2" strokeWidth={1.5} />
+                      X (Twitter)
+                    </a>
+                  </Button>
+                  
+                  <Button variant="outline" className="w-full" asChild>
+                    <a 
+                      href="https://www.instagram.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Instagram size={18} className="mr-2" strokeWidth={1.5} />
+                      Instagram
+                    </a>
+                  </Button>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-          
-          {/* Connect Section - Full Width */}
-          <Card className="border-none shadow-md col-span-1 md:col-span-2">
-            <CardHeader className="bg-gray-50 dark:bg-gray-800 pb-2">
-              <h3 className="text-xl font-bold">Connect With Me</h3>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
-                <a 
-                  href="https://www.linkedin.com/in/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-300"
-                >
-                  <Linkedin size={24} className="mb-1 text-gray-700 dark:text-gray-300" strokeWidth={1.5} />
-                  <span className="text-sm">LinkedIn</span>
-                </a>
-                <a 
-                  href="https://github.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-300"
-                >
-                  <Github size={24} className="mb-1 text-gray-700 dark:text-gray-300" strokeWidth={1.5} />
-                  <span className="text-sm">GitHub</span>
-                </a>
-                <a 
-                  href="https://twitter.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-300"
-                >
-                  <Twitter size={24} className="mb-1 text-gray-700 dark:text-gray-300" strokeWidth={1.5} />
-                  <span className="text-sm">Twitter</span>
-                </a>
-                <a 
-                  href="https://www.instagram.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-300"
-                >
-                  <Instagram size={24} className="mb-1 text-gray-700 dark:text-gray-300" strokeWidth={1.5} />
-                  <span className="text-sm">Instagram</span>
-                </a>
-                <a 
-                  href="https://www.youtube.com/@techbrewtv" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-300"
-                >
-                  <Youtube size={24} className="mb-1 text-gray-700 dark:text-gray-300" strokeWidth={1.5} />
-                  <span className="text-sm">YouTube</span>
-                </a>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
