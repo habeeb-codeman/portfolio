@@ -1,5 +1,4 @@
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Youtube, Linkedin, Github, Twitter, Instagram, Flame } from 'lucide-react';
@@ -13,27 +12,18 @@ const About = () => {
           <div className="h-1 w-20 bg-apple-blue mx-auto"></div>
         </div>
         
-        {/* Profile and Introduction */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <div className="lg:col-span-1 flex flex-col items-center justify-center">
-            <Avatar className="w-48 h-48 mb-6 border-4 border-apple-blue shadow-lg">
-              <AvatarImage src="/placeholder.svg" alt="Profile" />
-              <AvatarFallback>JS</AvatarFallback>
-            </Avatar>
-          </div>
-          
-          <div className="lg:col-span-2 flex items-center">
-            <Card className="w-full border-none shadow-md bg-gray-50 dark:bg-gray-800">
-              <CardContent className="pt-6">
-                <h3 className="text-2xl font-bold mb-4">Hello there!</h3>
-                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Always tinkering with tech and playing with ML to solve real-world stuff. Big on learning new things, 
-                  building cool projects, and vibing with teams that love innovation. Fun fact: I break things just to 
-                  figure out how they work (and then fix them… usually).
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+        {/* Introduction */}
+        <div className="mb-12">
+          <Card className="w-full border-none shadow-md bg-gray-50 dark:bg-gray-800">
+            <CardContent className="pt-6">
+              <h3 className="text-2xl font-bold mb-4">Hello there!</h3>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                Always tinkering with tech and playing with ML to solve real-world stuff. Big on learning new things, 
+                building cool projects, and vibing with teams that love innovation. Fun fact: I break things just to 
+                figure out how they work (and then fix them… usually).
+              </p>
+            </CardContent>
+          </Card>
         </div>
         
         {/* Education and Passions */}
